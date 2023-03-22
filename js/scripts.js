@@ -16,29 +16,45 @@
 // greet(username);
 
 
-let value = prompt("Enter radius of circle")
+// let value = prompt("Enter radius of circle")
     
-const radiusPara = document.querySelector("#radius");
-console.log(radiusPara)
-const resultPara = document.querySelector("#result");
-console.log(resultPara)
+// const radiusPara = document.querySelector("#radius");
+// console.log(radiusPara)
+// const resultPara = document.querySelector("#result");
+// console.log(resultPara)
 
-function calcCircArea(radius){
-    if(isNaN(radius)){
+// function calcCircArea(radius){
+//     if(isNaN(radius)){
 
-        // alert("NOT A NUMBER")
-        radiusPara.textContent += radius
-        resultPara.textContent = `ERROR radius cannot be calculated`
+//         // alert("NOT A NUMBER")
+//         radiusPara.textContent += radius
+//         resultPara.textContent = `ERROR radius cannot be calculated`
+
+//     }
+//     else{
+
+//         result = (Math.pow(radius,2)) * Math.PI
+//         // alert(`The result is: ${result.toFixed(2)}`)
+//         radiusPara.textContent += radius
+//         resultPara.textContent = `The result is: ${result.toFixed(2)}` 
+//     }
+
+// }
+
+// calcCircArea(value)
+
+let ulList = document.querySelector(".shopping")
+
+function addToList(ShopList){
+    for(let item of ShopList){
+
+        const newLi = document.createElement("li");
+        ulList.appendChild(newLi);
+        newLi.textContent = item;
 
     }
-    else{
-
-        result = (Math.pow(radius,2)) * Math.PI
-        // alert(`The result is: ${result.toFixed(2)}`)
-        radiusPara.textContent += radius
-        resultPara.textContent = `The result is: ${result.toFixed(2)}` 
-    }
-
 }
 
-calcCircArea(value)
+let myList = ['bread','cheese','peppers']
+
+addToList(myList)
