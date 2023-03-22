@@ -18,19 +18,25 @@
 
 let value = prompt("Enter radius of circle")
     
-
+const radiusPara = document.querySelector("#radius");
+console.log(radiusPara)
+const resultPara = document.querySelector("#result");
+console.log(resultPara)
 
 function calcCircArea(radius){
     if(isNaN(radius)){
 
-        alert("NOT A NUMBER")
+        // alert("NOT A NUMBER")
+        radiusPara.textContent += radius
+        resultPara.textContent = `ERROR radius cannot be calculated`
 
     }
     else{
 
         result = (Math.pow(radius,2)) * Math.PI
-        console.log(`The result is: ${result.toFixed(2)}`)
-    
+        // alert(`The result is: ${result.toFixed(2)}`)
+        radiusPara.textContent += radius
+        resultPara.textContent = `The result is: ${result.toFixed(2)}` 
     }
 
 }
