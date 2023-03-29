@@ -43,18 +43,60 @@
 
 // calcCircArea(value)
 
-let ulList = document.querySelector(".shopping")
+// let ulList = document.querySelector(".shopping")
 
-function addToList(ShopList){
-    for(let item of ShopList){
+// function addToList(ShopList){
+//     for(let item of ShopList){
 
-        const newLi = document.createElement("li");
-        ulList.appendChild(newLi);
-        newLi.textContent = item;
+//         const newLi = document.createElement("li");
+//         ulList.appendChild(newLi);
+//         newLi.textContent = item;
+
+//     }
+// }
+
+// let myList = ['bread','cheese','peppers']
+
+// addToList(myList)
+
+// function squarelistMaker ()
+// {
+//     const ulList = document.querySelector(".shopping.circleList");
+//     ulList.classList.remove("circleList");
+//     ulList.classList.add("squareList");
+// }
+// squarelistMaker();
+
+// const image = document.querySelector("#shoppingCart")
+
+// function updateimg()
+// {
+//     image.setAttribute("alt", "Shopping cart image")
+//     image.setAttribute("width", 300)
+//     image.setAttribute("lenght", 300)
+// }
+
+// updateimg();
+
+
+function cTextGreen()
+{
+//1. find alll li queryselectorall()
+//2. loop through li's
+//3. get text content
+//4. check if textcontent contains green
+const listItems = document.querySelectorAll("li")
+
+    for (let item of listItems)
+    {
+        const text = item.textContent
+        if (text.includes("green"))
+        {
+            item.setAttribute("style", "color:green")
+        }
 
     }
+    
 }
 
-let myList = ['bread','cheese','peppers']
-
-addToList(myList)
+cTextGreen();
